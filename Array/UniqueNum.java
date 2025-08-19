@@ -1,7 +1,7 @@
 public class UniqueNum {
     public static void main(String[] args) {
-        int arr[] ={1,2,3,4,1,2,3,5,8,8};
-        System.out.println(uniqueNumber(arr));;
+        int arr[] ={1,2,3,4,1,2,3,5,8,5,8};
+       System.out.println(uniqueNumber(arr));;
     }
 
     public static int uniqueNumber(int[]arr) {
@@ -11,6 +11,11 @@ public class UniqueNum {
                 if(arr[i]==arr[j]){
                     arr[i]=arr[j]=0;
                 }
+            }
+        }
+        for(int e:arr){
+            if(e!=0){
+                unique = e;
             }
         }
         return unique;
